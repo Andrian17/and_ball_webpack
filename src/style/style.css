@@ -1,21 +1,15 @@
-.clock {
-  width: 400px;
-  padding: 30px;
-  background-color: rgba(72, 1, 1, 0.881);
-
-  color: white;
-  font-family: sans-serif;
-
-  display: flex;
-  flex-direction: column;
+.card:hover {
+  border-color: rgb(161, 21, 142);
+  border: 10px;
+}
+iframe:hover {
+  opacity: 0.6;
 }
 
-.clock .time {
-  margin: 0 auto;
-  font-size: 64px;
-}
+/* responsive */
 
-.clock .date {
-  margin: 0 auto;
-  font-size: 24px;
+@media screen and (min-width: 650) {
+  .app-bar {
+    padding: 8px 32px;
+  }
 }
