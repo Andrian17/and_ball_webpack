@@ -15,43 +15,6 @@ class DataSource {
         return Promise.reject('Data Not Found');
       });
   }
-
-  static getTeams(team) {
-    return fetch(`${urlAPI}/team/${team}/?token=${tokenVideo}`)
-      .then((response) => response.json())
-      .then((results) => {
-        if (results.response) {
-          return Promise.resolve(results.response);
-        }
-        return Promise.reject('Data Not Found');
-      });
-  }
-
-  static getListClub() {
-    return [
-      {
-        club: 'real-madrid',
-      },
-      {
-        club: 'barcelona',
-      },
-      {
-        club: 'liverpool',
-      },
-      {
-        club: 'arsenal',
-      },
-      {
-        club: 'chelsea',
-      },
-      {
-        club: 'manchester-city',
-      },
-      {
-        club: 'manchester-united',
-      },
-    ];
-  }
 }
 
 export default DataSource;

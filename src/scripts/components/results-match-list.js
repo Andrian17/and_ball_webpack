@@ -5,24 +5,23 @@ class ResultsMatchList extends HTMLElement {
     super();
   }
 
-  set resMatches(results) {
-    this._results = results;
+  set resMatches(matches) {
+    this._matches = matches;
     this.render();
   }
 
   render() {
     this.innerHTML = ``;
 
-    if (!this._results) {
+    if (!this._matches) {
       this.innerHTML = `Request Wrong`;
     }
 
-    this._results.map((res, index) => {
+    this._matches.map((match, index) => {
       const ResultMatchItem = document.createElement('result-match-item');
-      ResultMatchItem.resMatch = res;
+      ResultMatchItem.resMatch = match;
       if (index < 5) {
         this.appendChild(ResultMatchItem);
-        console.log(index);
       }
     });
   }

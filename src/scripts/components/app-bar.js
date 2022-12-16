@@ -1,35 +1,7 @@
 import DataSource from '../data/DataSource';
 
 class AppBar extends HTMLElement {
-  constructor() {
-    super();
-  }
-
-  getListClub() {
-    try {
-      const clubList = DataSource.getListClub();
-      this._club = clubList;
-    } catch (err) {
-      console.log(err);
-    }
-  }
-
-  set clubList(club) {
-    this.render();
-  }
-
-  set click(event) {
-    this._event = event;
-    console.log(event);
-    console.log('OK Clikc');
-  }
-
-  get valueFromInput() {
-    return this.querySelector('input').value;
-  }
-
   connectedCallback() {
-    this.getListClub();
     if (this._club) {
       this.render();
     }
@@ -53,20 +25,6 @@ class AppBar extends HTMLElement {
           <li class="nav-item">
             <a class="nav-link disabled">Disabled</a>
           </li>
-          <li class="nav-item dropdown" id="drop-down-club">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu">
-            ${this._club
-              .map((element) => {
-                return `<li>
-                          <a id="${element.club}" class=" data-teams dropdown-item" href="#">${element.club}</a>
-                        </li>`;
-              })
-              .join('')}
-          </ul>
-        </li>
         <li class="nav-item">
           <a class="nav-link disabled">Disabled</a>
         </li>
@@ -78,8 +36,6 @@ class AppBar extends HTMLElement {
       </div>
     </div>
   </nav>`;
-    this.querySelectorAll('.data-teams'),
-      addEventListener('click', this._event);
   }
 }
 
