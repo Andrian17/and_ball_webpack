@@ -1,7 +1,4 @@
-const tokenVideo =
-  'NDE5MDdfMTY3MTAyNTE0NF8wMGEyNjVhMTFjYTU3ZjRmNTM4MjQxN2Q4ZmExNTkzNDU3MzY2MGIy';
-const tokenEmbed =
-  'NDE5MDdfMTY3MTAyNTE0NF8wODNjZjRkMWVmYmZmMTYxMWQ1MjIyZGFhY2U0NTM4OTg5YTIwMGY5';
+const tokenVideo = process.env.API_KEY_SCF;
 const urlAPI = `https://www.scorebat.com/video-api/v3`;
 
 class DataSource {

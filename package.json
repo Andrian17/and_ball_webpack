@@ -16,6 +16,7 @@
     "babel-loader": "^9.1.0",
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.2",
+    "dotenv-webpack": "^8.0.1",
     "eslint": "^8.29.0",
     "html-webpack-plugin": "^5.5.0",
     "style-loader": "^3.3.1",
