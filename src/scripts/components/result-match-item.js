@@ -12,15 +12,15 @@ class ResultMatchItem extends HTMLElement {
     this.innerHTML = `
     <div class="card justify-content-center m-auto p-3 mb-3 shadow-lg">
       <div class="card-body">
-        <p class="card-text">${this._matches.title}</p>
+        <p class="card-text fs-3">${this._matches.title}</p>
         <p class="card-text">${this._matches.competition} | ${moment(
       this._matches.date
     )
       .utc()
-      .format('YYYY-MM-DD, h:mm:ss')}</p>
+      .format('YYYY-MM-DD')}</p>
       </div>
-       ${this._matches.videos.map((video) => {
-         return video.embed;
+       ${this._matches.videos.map(({ embed }) => {
+         return embed;
        })}
     </div>
     `;

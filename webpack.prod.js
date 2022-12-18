@@ -3,9 +3,9 @@ const common = require('./webpack.common.js');
 
 module.exports = merge(common, {
   mode: 'production',
+  devtool: 'source-map',
   module: {
     rules: [
-      //   Babel
       {
         test: /\.js$/,
         exclude: '/node_modules/',

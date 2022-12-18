@@ -20,7 +20,7 @@ class ResultsMatchList extends HTMLElement {
     this._matches.map((match, index) => {
       const ResultMatchItem = document.createElement('result-match-item');
       ResultMatchItem.resMatch = match;
-      if (index < 5) {
+      if (index < 6) {
         this.appendChild(ResultMatchItem);
       }
     });

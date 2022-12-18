@@ -12,7 +12,7 @@ class DataSource {
         if (results.response) {
           return Promise.resolve(results.response);
         }
-        return Promise.reject('Data Not Found');
+        return Promise.reject('Sumber Data tidak merespon');
       });
   }
 }

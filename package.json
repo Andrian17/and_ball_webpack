@@ -4,8 +4,8 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "build": "webpack --config webpack.prod.js",
-    "start-dev": "webpack serve --config webpack.dev.js"
+    "start-dev": "webpack serve --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +14,7 @@
     "@babel/core": "^7.20.5",
     "@babel/preset-env": "^7.20.2",
     "babel-loader": "^9.1.0",
+    "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.2",
     "eslint": "^8.29.0",
     "html-webpack-plugin": "^5.5.0",
@@ -25,9 +26,8 @@
   },
   "dependencies": {
     "bootstrap": "^5.2.3",
-    "jquery": "^3.6.2",
     "moment": "^2.29.4",
-    "paginationjs": "^2.4.2",
-    "regenerator-runtime": "^0.13.11"
+    "regenerator-runtime": "^0.13.11",
+    "serviceworker-webpack-plugin": "^1.0.1"
   }
 }
