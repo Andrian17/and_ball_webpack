@@ -39,6 +39,9 @@ class AppBar extends HTMLElement {
           <input id="input-team" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" value="">
           <button id="search-matches" class="btn btn-outline-success">Search</button>
         </form>
+        <div class="d-flex p-2 justify-content-center">
+          <a id="about" href="https://github.com/Andrian17" target="_blank" class="btn btn-outline-danger">about me</a>
+        </div>
       </div>
     </div>
   </nav>`;

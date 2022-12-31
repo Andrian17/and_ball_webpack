@@ -19,8 +19,8 @@ class ResultsMatchList extends HTMLElement {
 
     this._matches.map((match, index) => {
       const ResultMatchItem = document.createElement('result-match-item');
-      ResultMatchItem.resMatch = match;
       if (index < 6) {
+        ResultMatchItem.resMatch = match;
         this.appendChild(ResultMatchItem);
       }
     });
