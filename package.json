@@ -23,12 +23,12 @@
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1",
     "webpack-dev-server": "^4.11.1",
-    "webpack-merge": "^5.8.0"
+    "webpack-merge": "^5.8.0",
+    "workbox-webpack-plugin": "^6.5.4"
   },
   "dependencies": {
     "bootstrap": "^5.2.3",
     "moment": "^2.29.4",
-    "regenerator-runtime": "^0.13.11",
-    "serviceworker-webpack-plugin": "^1.0.1"
+    "regenerator-runtime": "^0.13.11"
   }
 }
