@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
+const WorkboxPlugin = require('workbox-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -48,6 +49,12 @@ module.exports = {
       path: path.resolve(__dirname, '.env'),
       systemvars: true,
       safe: true,
+    }),
+    new WorkboxPlugin.GenerateSW({
+      // these options encourage the ServiceWorkers to get in there fast
+      // and not allow any straggling "old" SWs to hang around
+      clientsClaim: true,
+      skipWaiting: true,
     }),
   ],
 
