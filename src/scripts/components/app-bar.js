@@ -40,7 +40,7 @@ class AppBar extends HTMLElement {
           <button id="search-matches" class="btn btn-outline-success">Search</button>
         </form>
         <div class="d-flex p-2 justify-content-center">
-          <a id="about" href="https://github.com/Andrian17" target="_blank" class="btn btn-outline-primary">about me</a>
+          <a id="about" href="https://github.com/Andrian17" target="_blank" class="rounded-circle btn btn-outline-primary">about me</a>
         </div>
       </div>
     </div>
