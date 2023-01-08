@@ -1,15 +1,21 @@
 .card:hover {
   border-color: rgb(92, 2, 95);
-  border-width: 2px;
 }
 iframe:hover {
   opacity: 0.85;
 }
 
+main {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+}
+
 /* responsive */
 
-/* @media screen and (min-width: 750) {
-  #res-item {
-    min-width: 200px;
+@media screen and (max-width: 670px) {
+  result-match-item {
+    margin: 0px;
+    padding: 0px;
   }
-} */
+}

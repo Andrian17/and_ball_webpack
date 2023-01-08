@@ -7,7 +7,7 @@ const WorkboxPlugin = require('workbox-webpack-plugin');
 module.exports = {
   entry: {
     app: path.resolve(__dirname, 'src/scripts/index.js'),
-    // sw: path.resolve(__dirname, 'src/scripts/serviceworker.js'),
+    sw: path.resolve(__dirname, 'src/scripts/serviceworker.js'),
   },
   optimization: {
     splitChunks: {
