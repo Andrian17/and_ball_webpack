@@ -7,7 +7,7 @@ const WorkboxPlugin = require('workbox-webpack-plugin');
 module.exports = {
   entry: {
     app: path.resolve(__dirname, 'src/scripts/index.js'),
-    sw: path.resolve(__dirname, 'src/scripts/serviceworker.js'),
+    // sw: path.resolve(__dirname, 'src/scripts/serviceworker.js'),
   },
   optimization: {
     splitChunks: {
@@ -55,6 +55,7 @@ module.exports = {
       // and not allow any straggling "old" SWs to hang around
       clientsClaim: true,
       skipWaiting: true,
+      maximumFileSizeToCacheInBytes: 15 * 1024 * 1024,
     }),
   ],
 
@@ -62,7 +63,7 @@ module.exports = {
     rules: [
       // CSS
       {
-        test: /\.css$/,
+        test: /\.css$/i,
         use: [
           {
             loader: 'style-loader',
@@ -72,16 +73,26 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.(gif|png|jpe?g)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '/src/public/[name].[ext]',
+            },
+          },
+        ],
+      },
+      {
+        test: /\.html$/,
+        use: ['html-loader'],
+      },
     ],
   },
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
-  },
-  optimization: {
-    splitChunks: {
-      chunks: 'all',
-    },
   },
 };

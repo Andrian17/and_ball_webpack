@@ -1,5 +1,6 @@
 .card:hover {
-  border-color: rgb(161, 21, 142);
+  border-color: rgb(92, 2, 95);
+  border-width: 2px;
 }
 iframe:hover {
   opacity: 0.85;
@@ -7,8 +8,8 @@ iframe:hover {
 
 /* responsive */
 
-@media screen and (min-width: 650) {
-  .app-bar {
-    padding: 8px 32px;
+/* @media screen and (min-width: 750) {
+  #res-item {
+    min-width: 200px;
   }
-}
+} */

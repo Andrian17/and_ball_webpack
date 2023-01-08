@@ -10,9 +10,9 @@ class ResultMatchItem extends HTMLElement {
   }
   render() {
     this.innerHTML = `
-    <div class="card justify-content-center m-auto p-3 mb-3 shadow-lg">
+    <div id="res-item" class="card mb-3 shadow-lg mx-3">
       <div class="card-body">
-        <p class="card-text fs-3">${this._matches.title}</p>
+        <p class="card-text fs-5">${this._matches.title}</p>
         <p class="card-text">${this._matches.competition} | ${moment(
       this._matches.date
     )
